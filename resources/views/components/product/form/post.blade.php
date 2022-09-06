@@ -1,7 +1,6 @@
 @auth
 <div class="p-4">
-    <form action="{{ route('product.create') }}" method="post"
-    enctype="multipart/form-data">
+    <form action="{{ route('product.create') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mt-1">
             <textarea

@@ -13,8 +13,8 @@ class CreateController extends Controller
     {
         $productService->saveProduct(
             $request->userId(),
-            $request->product(),
             $request->name(),
+            $request->product(),
             $request->images() //ここたぶんミスしている
         );
         return redirect()->route('product.index');

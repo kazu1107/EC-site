@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Models\Product;
-use Carbon\Carbon;
 use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
