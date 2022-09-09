@@ -25,17 +25,17 @@
 <script>
     function inputFormHandler() {
         return {
-        fields: [],
-        addField() {
-            const i = this.fields.length;
-            this.fields.push({
-            file: '',
-            id: `input-image-${i}`
-            });
-        },
-        removeField(index) {
-            this.fields.splice(index, 1);
-        }
+            fields: [],
+            addField() {
+                const i = this.fields.length;
+                this.fields.push({
+                    file: '',
+                    id: `input-image-${i}`
+                });
+            },
+            removeField(index) {
+                this.fields.splice(index, 1);
+            }
         }
     }
-</script>
+    </script>

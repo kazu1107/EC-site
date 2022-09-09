@@ -9,6 +9,12 @@ use App\Services\ProductService;
 
 class CreateController extends Controller
 {
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function __invoke(CreateRequest $request, ProductService $productService)
     {
         $productService->saveProduct(

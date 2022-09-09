@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class, 'show']);
 Route::get('/sample/{id}', [\App\Http\Controllers\Sample\IndexController::class, 'showId']);
 
-Route::get('/top', \App\Http\Controllers\Top\IndexController::class)
+Route::get('/product', \App\Http\Controllers\Product\IndexController::class)
 ->name('product.index');
 Route::middleware('auth')->group(function () {
     Route::post('/product/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');
@@ -29,15 +29,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/product/update/{productId}', \App\Http\Controllers\Product\Update\PutController::class)->name('product.update.put');
     Route::delete('/product/delete/{productId}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
 });
-// Tweet
-// Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)->name('tweet.index');
-/* Route::middleware('auth')->group(function () {
-    Route::post('/tweet/create', \App\Http\Controllers\Tweet\CreateController::class)
-        ->name('tweet.create');
-    Route::get('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)->name('tweet.update.index');
-    Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)->name('tweet.update.put');
-    Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)->name('tweet.delete');
-}); */
 
 Route::get('/dashboard', function () {
     return view('dashboard');
