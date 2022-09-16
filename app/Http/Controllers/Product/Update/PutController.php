@@ -25,6 +25,7 @@ class PutController extends Controller
         $product = Product::where('id', $request->id())->firstOrFail();
         $product->product_name = $request->product0();
         $product->description = $request->product();
+        $product->price = $request->price();
         $product->save();
         return redirect()
             ->route('product.update.index', ['productId' => $product->id])

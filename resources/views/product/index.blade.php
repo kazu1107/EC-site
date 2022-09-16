@@ -5,5 +5,6 @@
         </h2>
         <x-product.form.post></x-product.form.post>
         <x-product.list :products="$products"></x-product.list>
+        <x-product.music></x-product.music>
     </x-layout.single>
 </x-layout>

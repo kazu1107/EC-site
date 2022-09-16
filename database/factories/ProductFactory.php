@@ -19,7 +19,8 @@ class ProductFactory extends Factory
         return [
             'user_id' => 1,
             'description' => $this->faker->realText(100),
-            'product_name' => $this->faker->realText(15) // add
+            'product_name' => $this->faker->realText(15), // add
+            'price' => $this->faker->numberBetween(100, 100000)
         ];
     }
 }

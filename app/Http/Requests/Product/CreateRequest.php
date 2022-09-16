@@ -26,6 +26,7 @@ class CreateRequest extends FormRequest
         return [
             'product_description' => 'required|max:255',
             'product_name' => 'required|max:40',
+            'price' => 'required|max:100000',
             'images' => 'array|max:4',
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
@@ -44,6 +45,11 @@ class CreateRequest extends FormRequest
     public function name(): string
     {
         return $this->input('product_name');
+    }
+
+    public function price(): int
+    {
+        return (int) $this->input('price');
     }
 
     public function images(): array

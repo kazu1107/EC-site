@@ -11,6 +11,7 @@
                 </span>
                 <p class="text-gray-600">{!! nl2br(e($product->product_name)) !!}</p>
                 <p class="text-gray-600">{!! nl2br(e($product->description)) !!}</p>
+                <p class="text-gray-600">{!! nl2br(e($product->price)) !!}円</p>
                 <x-product.images :images="$product->images"/>
             </div>
             <div>
