@@ -1,7 +1,7 @@
 @props([
     'product'
 ])
-<div class="p-4">
+<div class="p-4 bg-cyan-200">
     <form action="{{ route('product.update.put', ['productId' => $product->id]) }}" method="post">
         @method('PUT')
         @csrf
