@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Product\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::get('/sample/{id}', [\App\Http\Controllers\Sample\IndexController::class,
 
 Route::get('/product', \App\Http\Controllers\Product\IndexController::class)
 ->name('product.index');
+
+Route::get('/search', \App\Http\Controllers\Product\UsersController::class)
+->name('product.search');
+
 Route::middleware('auth')->group(function () {
     Route::post('/product/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');
     Route::get('/product/update/{productId}', \App\Http\Controllers\Product\Update\IndexController::class)->name('product.update.index');
