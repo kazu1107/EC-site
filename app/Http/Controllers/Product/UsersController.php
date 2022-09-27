@@ -10,16 +10,17 @@ use App\Services\ProductService;
 class UsersController extends Controller
 {
 
+    /**
+    * ユーザー一覧
+    * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+    */
+
     public function __invoke(Request $request, ProductService $productService)
     {
-
-
-        /**
-        * ユーザー一覧
-        * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
-        */
         // $products = $productService->getProducts();
          // 検索フォームで入力された値を取得する
+        $products = Product::paginate(2);
+
         $search = $request->input('search');
 
         // クエリビルダ
@@ -41,8 +42,9 @@ class UsersController extends Controller
             }
 
             // 上記で取得した$queryをページネートにし、変数$usersに代入
-            $products = $query->get();
+
         }
+        $products = $query->paginate(2);
 
         // ビューにusersとsearchを変数として渡す
         return view('product.index')

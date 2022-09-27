@@ -22,10 +22,6 @@
                         </button>
                     </div>
                 </form>
-
-                @foreach($products as $product)
-                        {{ $product->product_name }}
-                @endforeach
             </div>
 
         </div>

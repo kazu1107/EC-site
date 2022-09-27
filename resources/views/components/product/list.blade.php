@@ -21,4 +21,7 @@
         </li>
         @endforeach
     </ul>
+    {{ $products->appends(request()->input())->links() }}
+
+
 </div>
