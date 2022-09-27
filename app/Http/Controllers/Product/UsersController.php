@@ -19,7 +19,7 @@ class UsersController extends Controller
     {
         // $products = $productService->getProducts();
          // 検索フォームで入力された値を取得する
-        $products = Product::paginate(2);
+        $products = Product::paginate(10);
 
         $search = $request->input('search');
 
@@ -44,7 +44,7 @@ class UsersController extends Controller
             // 上記で取得した$queryをページネートにし、変数$usersに代入
 
         }
-        $products = $query->paginate(2);
+        $products = $query->orderBy('created_at', 'DESC')->paginate(10);
 
         // ビューにusersとsearchを変数として渡す
         return view('product.index')

@@ -18,7 +18,7 @@ class IndexController extends Controller
     public function __invoke(Request $request, ProductService $productService)
     {
         $products = $productService->getProducts();
-        $products = Product::paginate(2);
+        $products = Product::orderBy('created_at', 'DESC')->paginate(10);
         return view('product.index')
             ->with('products', $products);
     }
