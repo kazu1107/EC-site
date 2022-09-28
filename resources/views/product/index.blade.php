@@ -1,10 +1,11 @@
 <x-layout title="TOP | EC2">
+    <x-product.header></x-product.header>
     <div class="bg-neutral-200">
+
     <x-layout.single>
-        <h2 class="text-center text-blue-500 text-4xl font-bold mt-8 mb-8">
-            WELCOME TO EC2 SITE!!
-        </h2>
-        <div class="shadow-md bg-white">
+
+
+        <div class="shadow-md bg-white mt-3">
             <x-product.form.post></x-product.form.post>
         </div>
         <div class="flex justify-center mt-5">
