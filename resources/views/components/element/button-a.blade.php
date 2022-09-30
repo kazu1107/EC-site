@@ -6,8 +6,8 @@
     if(!function_exists('getThemeClassForButtonA')){
         function getThemeClassForButtonA($theme) {
             return match ($theme) {
-                'primary' => 'text-white bg-blue-500 hover:bg-blue-600 focus:ring-blue-500',
-                'secondary' => 'text-white bg-red-500 hover:bg-red-600 focus:ring-red-500',
+                'primary' => 'text-white bg-blue-500 no-underline hover:bg-blue-600 focus:ring-blue-500',
+                'secondary' => 'text-white bg-red-500  no-underline hover:bg-red-600 focus:ring-red-500',
                 default => '',
             };
         }

@@ -1,10 +1,7 @@
 <x-layout title="TOP | EC2">
     <x-product.header></x-product.header>
     <div class="bg-neutral-200">
-
     <x-layout.single>
-
-
         <div class="shadow-md bg-white mt-3">
             <x-product.form.post></x-product.form.post>
         </div>
@@ -12,17 +9,6 @@
             <x-product.list :products="$products"></x-product.list>
             <div>
                 <x-product.music></x-product.music>
-                <form method="GET" action="{{ route('product.search') }}">
-                    <input type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
-                    <div>
-                        <button type="submit">検索</button>
-                        <button>
-                            <a href="{{ route('product.index') }}" class="text-white">
-                                クリア
-                            </a>
-                        </button>
-                    </div>
-                </form>
             </div>
 
         </div>
