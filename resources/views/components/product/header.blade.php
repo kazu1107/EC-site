@@ -30,6 +30,11 @@
             </div>
         </form>
         @endauth
+        @guest
+            <a href="#pagebottom" class="flex justify-end w-3/12 my-auto">
+                <img class="transform transition duration-500 hover:scale-125" src="/images/down.png">
+            </a>
+        @endguest
     </div>
     <div class="w-full h-full flex my-0 mx-auto border border-solid
     border-zinc-300 pt-2 pb-2">

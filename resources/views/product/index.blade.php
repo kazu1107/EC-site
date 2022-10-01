@@ -14,4 +14,7 @@
         </div>
     </x-layout.single>
     </div>
+    <a name="pagebottom">
+    <x-product.footer></x-product.footer>
+    </a>
 </x-layout>
