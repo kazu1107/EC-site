@@ -1,17 +1,15 @@
 <div>
-    <div class="px-5 h-16 flex w-full">
-        <h2 class="w-3/12 text-blue-500 text-4xl font-bold my-auto">
-            俵屋
-        </h2>
-        <form method="GET" action="{{ route('product.search') }}" class="flex justify-center h-1/2 my-auto w-full">
-            <input class="" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
-            <div class="my-auto w-40 pl-1">
+    <div class="px-5 h-16 flex w-full h-16">
+        <img class="" src="/images/title.png">
+        <form method="GET" action="{{ route('product.search') }}" class="flex justify-end h-1/2 my-auto w-full mx-5">
+            <input class="relative w-full mx-5" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+            <div class="absolute flex my-auto mx-5">
                 <button type="submit" class="inline-flex justify-center py-1 px-2 border border-transparent
-                shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none
+                shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none
                 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">検索</button>
                 <button>
                     <a href="{{ route('product.index') }}" class="no-underline inline-flex justify-center py-1 px-2
-                    border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500
+                    border border-transparent shadow-sm text-sm font-medium text-white bg-red-500
                     hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                         クリア
                     </a>
@@ -58,5 +56,8 @@
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">個人情報保護方針</a>
         </div>
+    </div>
+    <div class="flex justify-end">
+        <x-product.music></x-product.music>
     </div>
 </div>

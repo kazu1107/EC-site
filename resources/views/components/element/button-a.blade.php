@@ -20,7 +20,6 @@
     shadow-sm
     text-sm
     font-medium
-    rounded-md
     focus:outline-none focus:ring-2 focus:ring-offset-2 {{ getThemeClassForButtonA($theme) }}">
     {{ $slot }}
 </a>

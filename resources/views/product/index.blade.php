@@ -7,10 +7,6 @@
         </div>
         <div class="flex justify-center mt-5">
             <x-product.list :products="$products"></x-product.list>
-            <div>
-                <x-product.music></x-product.music>
-            </div>
-
         </div>
     </x-layout.single>
     </div>

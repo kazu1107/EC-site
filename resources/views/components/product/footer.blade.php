@@ -1,5 +1,5 @@
 <div class="border-t-blue-500 border-4">
-    <div class=" flex flex-col my-0 pt-8 pb-4 bg-neutral-300">
+    <div class=" flex flex-col my-0 pt-4 pb-2 bg-neutral-300">
         <div class="w-3/12 text-center mx-auto">
             <div class="no-underline text-black px-1 text-lg">・メニュー</div>
         </div>
