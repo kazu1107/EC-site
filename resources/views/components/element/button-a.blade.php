@@ -6,20 +6,15 @@
     if(!function_exists('getThemeClassForButtonA')){
         function getThemeClassForButtonA($theme) {
             return match ($theme) {
-                'primary' => 'text-white bg-blue-500 no-underline hover:bg-blue-600 focus:ring-blue-500',
-                'secondary' => 'text-white bg-red-500  no-underline hover:bg-red-600 focus:ring-red-500',
+                'primary' => 'no-underline text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3',
+                'secondary' => 'text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3',
                 default => '',
             };
         }
     }
 @endphp
 <a href="{{ $href }}" class="
-    inline-flex justify-center
-    py-2 px-4
-    border border-transparent
-    shadow-sm
-    text-sm
-    font-medium
-    focus:outline-none focus:ring-2 focus:ring-offset-2 {{ getThemeClassForButtonA($theme) }}">
+    text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3 {{ getThemeClassForButtonA($theme) }}">
     {{ $slot }}
 </a>
+<button

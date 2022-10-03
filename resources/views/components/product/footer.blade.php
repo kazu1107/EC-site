@@ -13,6 +13,10 @@
         </div>
         <div class="w-3/12 text-center mx-auto">
             <a href="" class="underline text-black px-1 hover:text-red-600
+            hover:duration-500 hover:underline-offset-4">出品</a>
+        </div>
+        <div class="w-3/12 text-center mx-auto">
+            <a href="" class="underline text-black px-1 hover:text-red-600
             hover:duration-500 hover:underline-offset-4">お問い合わせ</a>
         </div>
         <div class="w-3/12 text-center mx-auto">

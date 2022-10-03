@@ -29,29 +29,40 @@
         </form>
         @endauth
         @guest
-            <a href="#pagebottom" class="flex justify-end w-3/12 my-auto">
-                <img class="transform transition duration-500 hover:scale-125" src="/images/down.png">
-            </a>
+        <div class="flex justify-end">
+
+            <div class="flex">
+                <x-element.button-a :href="route('login')">ログイン</x-element.button-a>
+                <x-element.button-a :href="route('register')" theme="secondary">会員登録</x-element.button-a>
+                <img class="mt-3" src="/images/logout.png">
+
+            </div>
+        </div>
         @endguest
     </div>
     <div class="w-full h-full flex my-0 mx-auto border border-solid
     border-zinc-300 pt-2 pb-2">
-        <div class="w-3/12 mx-auto flex justify-center">
+        <div class="w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/home.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">ホーム</a>
         </div>
-        <div class="w-3/12 mx-auto flex justify-center">
+        <div class="w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/login.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">マイページ</a>
         </div>
-        <div class="w-3/12 mx-auto flex justify-center">
+        <div class="w-1/5 mx-auto flex justify-center">
+            <img class="h-1/2 my-auto px-1" src="/images/camera.png">
+            <a href="" class="no-underline text-center
+            text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">出品</a>
+        </div>
+        <div class="w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/tell.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">お問い合わせ</a>
         </div>
-        <div class="w-3/12 mx-auto flex justify-center">
+        <div class="w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/privacy.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">個人情報保護方針</a>
