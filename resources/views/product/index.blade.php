@@ -13,3 +13,7 @@
     </a>
 
 </x-layout>
+{{-- <div class="bg-green-300 w-full h-full">
+    <img class="object-contain h-48 w-full" src="/images/home.png">
+</div>
+ --}}
