@@ -1,7 +1,7 @@
 <div>
-    <div class="px-5 h-16 flex w-full h-16">
+    <div class="px-5 h-16 flex  h-16">
         <img class="" src="/images/title.png">
-        <form method="GET" action="{{ route('product.search') }}" class="flex justify-end h-1/2 my-auto w-full mx-5">
+        <form method="GET" action="{{ route('product.search') }}" class="flex justify-end h-1/2 my-auto mx-5">
             <input class="relative w-full mx-5" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div class="absolute flex my-auto mx-5">
                 <button type="submit" class="inline-flex justify-center py-1 px-2 border border-transparent
@@ -19,7 +19,7 @@
         @auth
         <form method="post" action="{{ route('logout') }}" class="w-3/12">
             @csrf
-            <div class="flex justify-end">
+            <div class="flex ">
                 <button
                         class="text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3"
                         onclick="event.preventDefault(); this.closest('form').submit();"
@@ -29,13 +29,11 @@
         </form>
         @endauth
         @guest
-        <div class="flex justify-end">
-
-            <div class="flex">
+        <div class="w-3/12">
+            <div class="flex justify-end">
                 <x-element.button-a :href="route('login')">ログイン</x-element.button-a>
                 <x-element.button-a :href="route('register')" theme="secondary">会員登録</x-element.button-a>
-                <img class="mt-3" src="/images/logout.png">
-
+                <img class="mt-3" src="/images/header_icon1.png">
             </div>
         </div>
         @endguest

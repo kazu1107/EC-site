@@ -3,21 +3,23 @@
 ])
 
 @if(count($images) > 0)
-<div x-data="{}" class="px-2">
-    <div class="flex justify-center -mx-2">
+<div x-data="{}" class="flex justify-center">
+    {{-- <div class="flex justify-center -mx-2"> --}}
         @foreach($images as $image)
-        <div class="w-1/6 px-2 mt-5">
-            <div class="bg-gray-400">
-                <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ asset('storage/images/' . $image->name)  }}' })" class="cursor-pointer">
-                    <img alt="{{ $image->name }}" class="object-fit w-full" src="{{ asset('storage/images/' . $image->name) }}">
-                </a>
-            </div>
+        @if($loop->first)
+        <div class="w-full bg-gray-400">
+            {{-- <div class="bg-gray-400"> --}}
+                {{-- <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ asset('storage/images/' . $image->name)  }}' })" class="cursor-pointer"> --}}
+                    <img alt="{{ $image->name }}" class="mx-auto" src="{{ asset('storage/images/' . $image->name) }}">
+                {{-- </a> --}}
+            {{-- </div> --}}
         </div>
+        @endif
         @endforeach
-    </div>
+    {{-- </div> --}}
 </div>
 @endif
-@once
+{{-- @once
     <div x-data="{ imgModal : false, imgModalSrc : '' }">
         <div
             @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc;"
@@ -53,4 +55,4 @@
         [x-cloak] { display: none !important; }
     </style>
     @endpush
-@endonce
+@endonce --}}
