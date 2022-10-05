@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-    <div class="container flex justify-end pt-2 pb-2">
+    <div class="pr-4 flex justify-end pt-2 pb-2">
     <div>
         <!-- 再生ボタン -->
-        <button id="play" class="btn btn-primary">BGM</button><!-- #play -->
+        <button id="play" class="btn btn-primary">♪</button><!-- #play -->
     </div>
     <div>
         <!-- 音量ボタン -->

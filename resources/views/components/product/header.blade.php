@@ -66,7 +66,7 @@
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">個人情報保護方針</a>
         </div>
     </div>
-    <div class="flex justify-end">
+    <div class="flex justify-end pr-3">
         <x-product.music></x-product.music>
     </div>
 </div>

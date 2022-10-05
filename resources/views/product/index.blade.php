@@ -1,8 +1,8 @@
 <x-layout title="TOP | EC2">
     <x-product.header></x-product.header>
-    <div class="bg-neutral-200">
+    <div class="bg-white">
     <x-layout.single>
-        <div class="shadow-md bg-white my-3">
+        <div class="bg-white my-3">
             <x-product.form.post></x-product.form.post>
         </div>
     </x-layout.single>
