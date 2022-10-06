@@ -25,7 +25,7 @@
         </div>
         @endforeach
 
-    {{ $products->appends(request()->input())->links() }}
+    {{ $products->appends(request()->input())->links('pagination') }}
 
 
 </div>

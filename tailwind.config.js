@@ -13,6 +13,7 @@ module.exports = {
             colors: {
                 'price_color': '#999999',
                 'title_blue': '#1b27f6',
+                'menu_logo_color': '#d1a527',
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
