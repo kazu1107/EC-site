@@ -1,37 +1,54 @@
-<div>
-    <div class="px-5 h-16 flex  h-16">
-        <img class="" src="/images/title.png">
-        <form method="GET" action="{{ route('product.search') }}" class="flex justify-end h-1/2 my-auto mx-5">
-            <input class="relative w-full mx-5" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
-            <div class="absolute flex my-auto mx-5">
-                <button type="submit" class="inline-flex justify-center py-1 px-2 border border-transparent
-                shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none
+<div class="bg-white">
+    <div class="px-3 h-16 flex w-full">
+        <div class="w-full pl-3">
+            <img class="h-16" src="/images/title.png">
+        </div>
+        <form method="GET" action="{{ route('product.search') }}" class="rounded relative flex justify-end h-10 my-auto mx-5">
+            <input class="relative w-96 h-10 rounded" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+            <div class="right-2 h-10 absolute flex my-auto">
+                <button type="submit" class="rounded inline-flex justify-center my-auto py-1 px-2 border border-transparent
+                shadow-sm text-sm font-medium text-white bg-title_blue hover:bg-blue-600 focus:outline-none
                 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">検索</button>
-                <button>
+                {{-- <button>
                     <a href="{{ route('product.index') }}" class="no-underline inline-flex justify-center py-1 px-2
                     border border-transparent shadow-sm text-sm font-medium text-white bg-red-500
                     hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                         クリア
                     </a>
-                </button>
+                </button> --}}
             </div>
         </form>
+        {{-- <div class=" bg-gray-200">
+            <div class="container h-screen flex justify-center items-center">
+                <div class="relative">
+                    <div class="absolute top-4 left-3">
+                        <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
+                    </div>
+                <input type="text" class="h-14 w-96 pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none" placeholder="Search anything...">
+                    <div class="absolute top-2 right-2">
+
+                        <button class="h-10 w-20 text-white rounded-lg bg-red-500 hover:bg-red-600">Search</button>
+
+                    </div>
+                </div>
+            </div>
+        </div> --}}
         @auth
-        <form method="post" action="{{ route('logout') }}" class="w-3/12">
+        <form method="post" action="{{ route('logout') }}" class="w-full pr-3">
             @csrf
-            <div class="flex ">
+            <div class="flex justify-end">
                 <button
                         class="text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3"
                         onclick="event.preventDefault(); this.closest('form').submit();"
                 >ログアウト</button>
-                <img class="mt-3" src="/images/logout.png">
+                {{-- <img class="mt-3" src="/images/logout.png"> --}}
             </div>
         </form>
         @endauth
         @guest
-        <div class="w-3/12">
+        <div class="w-full pr-3">
             <div class="flex justify-end">
-                <x-element.button-a :href="route('login')">ログイン</x-element.button-a>
+                <x-element.button-a :href="route('login')">ログイン&nbsp;</x-element.button-a>
                 <x-element.button-a :href="route('register')" theme="secondary">会員登録</x-element.button-a>
                 <img class="mt-3" src="/images/header_icon1.png">
             </div>
