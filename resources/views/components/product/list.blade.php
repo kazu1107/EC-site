@@ -4,7 +4,7 @@
 <div class="flex flex-wrap bg-white mt-3 mx-3">
 
         @foreach($products as $product)
-        <div class="w-1/5 p-3">
+        <div class="w-4/12 md:w-1/5 p-3">
             <div>
                 {{-- <span class="text-gray-600 bg-gray-100 px-2 py-1 text-xs mb-2">
                     出品者：{{ $product->user->name }}
@@ -24,8 +24,7 @@
             </div> --}}
         </div>
         @endforeach
-
-    {{ $products->appends(request()->input())->links('pagination') }}
-
-
+</div>
+<div class="w-full">
+    {{ $products->appends(request()->input())->links('vendor.pagination.sample-pagination') }}
 </div>

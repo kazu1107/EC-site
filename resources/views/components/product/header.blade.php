@@ -4,7 +4,7 @@
             <img class="h-16" src="/images/title.png">
         </div>
         <form method="GET" action="{{ route('product.search') }}" class="rounded relative flex justify-end h-10 my-auto mx-5">
-            <input class="relative w-96 h-10 rounded" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+            <input class="relative w-48 md:w-96 h-10 rounded" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div class="right-2 h-10 absolute flex my-auto">
                 <button type="submit" class="rounded inline-flex justify-center my-auto py-1 px-2 border border-transparent
                 shadow-sm text-sm font-medium text-white bg-title_blue hover:bg-blue-600 focus:outline-none
@@ -55,29 +55,29 @@
         </div>
         @endguest
     </div>
-    <div class="w-full h-full flex my-0 mx-auto border border-solid
-    border-zinc-300 pt-2 pb-2">
-        <div class="w-1/5 mx-auto flex justify-center">
+    <div class="w-full h-full md:flex my-0 mx-auto border border-solid
+    border-zinc-300 md:pt-2 md:pb-2">
+        <div class="md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/home.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">ホーム</a>
         </div>
-        <div class="w-1/5 mx-auto flex justify-center">
+        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/login.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">マイページ</a>
         </div>
-        <div class="w-1/5 mx-auto flex justify-center">
+        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/camera.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">出品</a>
         </div>
-        <div class="w-1/5 mx-auto flex justify-center">
+        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/tell.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">お問い合わせ</a>
         </div>
-        <div class="w-1/5 mx-auto flex justify-center">
+        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/privacy.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">個人情報保護方針</a>

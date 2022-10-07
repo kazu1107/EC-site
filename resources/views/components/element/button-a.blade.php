@@ -6,7 +6,7 @@
     if(!function_exists('getThemeClassForButtonA')){
         function getThemeClassForButtonA($theme) {
             return match ($theme) {
-                'primary' => 'pr-4 no-underline text-sm text-gray-500 hover:text-red-500 hover:duration-200 my-auto',
+                'primary' => 'md:pr-4 no-underline text-sm text-gray-500 hover:text-red-500 hover:duration-200 my-auto',
                 'secondary' => 'text-sm text-gray-500 hover:text-red-500 hover:duration-200 my-auto',
                 default => '',
             };
