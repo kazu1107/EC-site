@@ -17,4 +17,3 @@
     text-sm text-gray-500 hover:text-red-500 hover:duration-200 mt-3 {{ getThemeClassForButtonA($theme) }}">
     {{ $slot }}
 </a>
-<button

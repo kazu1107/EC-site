@@ -10,7 +10,7 @@
     <title>{{ $title ?? 'EC2' }}</title>
     @stack('css')
 </head>
-<body class="bg-gray-50">
+<body class="bg-white">
     {{ $slot }}
 </body>
 </html>

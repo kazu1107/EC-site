@@ -50,7 +50,7 @@
             <div class="flex justify-end">
                 <x-element.button-a :href="route('login')">ログイン&nbsp;</x-element.button-a>
                 <x-element.button-a :href="route('register')" theme="secondary">会員登録</x-element.button-a>
-                <img class="mt-3" src="/images/header_icon1.png">
+                {{-- <img class="mt-3" src="/images/header_icon1.png"> --}}
             </div>
         </div>
         @endguest
@@ -62,22 +62,22 @@
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">ホーム</a>
         </div>
-        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/login.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">マイページ</a>
         </div>
-        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/camera.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">出品</a>
         </div>
-        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/tell.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">お問い合わせ</a>
         </div>
-        <div class="border-t border-solid md:w-1/5 mx-auto flex justify-center">
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/privacy.png">
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">個人情報保護方針</a>
