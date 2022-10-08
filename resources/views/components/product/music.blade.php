@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScriptで音楽再生する方法をサンプルコード付き解説!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=""> {{-- <-href内にstyle.cssと記載してエラーのため未記載 --}}
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>

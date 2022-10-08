@@ -1,8 +1,8 @@
 <div class="bg-white">
     <div class="px-3 h-16 flex w-full">
-        <div class="w-full pl-3">
+        <a href="/product" class="w-full pl-3">
             <img class="h-16" src="/images/title.png">
-        </div>
+        </a>
         <form method="GET" action="{{ route('product.search') }}" class="rounded relative flex justify-end h-10 my-auto mx-5">
             <input class="relative w-48 md:w-96 h-10 rounded" type="text" placeholder="商品名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div class="right-2 h-10 absolute flex my-auto">
@@ -59,7 +59,7 @@
     border-zinc-300 md:pt-2 md:pb-2">
         <div class="md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/home.png">
-            <a href="" class="no-underline text-center
+            <a href="/product" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">ホーム</a>
         </div>
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">

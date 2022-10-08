@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Product\UsersController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,12 @@ Route::get('/product', \App\Http\Controllers\Product\IndexController::class)
 
 Route::get('/search', \App\Http\Controllers\Product\UsersController::class)
 ->name('product.search');
+
+Route::get('/contact', function () {
+    return view('product.contact');
+})->name('contact');
+
+Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function () {
     Route::post('/product/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');

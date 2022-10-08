@@ -9,7 +9,7 @@
     <x-product.list :products="$products"></x-product.list>
     </div>
     <x-product.footer></x-product.footer>
-    </a>
+    {{-- </a> --}}
 
 </x-layout>
 {{-- <div class="bg-green-300 w-full h-full">

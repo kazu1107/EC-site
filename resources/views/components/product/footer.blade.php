@@ -5,7 +5,7 @@
                 <div class="no-underline text-black text-lg font-bold">外部リンク</div>
             </div>
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
+                <a href="https://github.com/kazu1107" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">Github</a>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 <div class="no-underline text-black text-lg font-bold">メニュー</div>
             </div>
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
+                <a href="/product" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">ホーム</a>
             </div>
             <div class="">
@@ -36,9 +36,9 @@
     </div>
 </div>
 <div class="bg-Neutral-100 flex h-20 w-full border-t">
-    <div class="h-8 my-auto pl-3 w-full">
+    <a href="https://github.com/kazu1107" class="h-8 my-auto pl-3 w-full">
         <img class="h-8 pl-3" src="/images/github.png">
-    </div>
+    </a>
     <div class="h-20 flex justify-end pr-4 w-full">
             <div class="text-gray-500 text-sm my-auto pr-4">Copyright © 2022 - <?php echo date('Y'); ?> ONZE. All Rights Reserved.</div>
     </div>

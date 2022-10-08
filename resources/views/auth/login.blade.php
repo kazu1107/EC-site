@@ -1,10 +1,10 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            {{-- <a href="/"> --}}
+            <a href="/product">
                 {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
                 <img class=" h-20 fill-current" src="/images/title.png">
-            {{-- </a> --}}
+            </a>
         </x-slot>
 
         <!-- Session Status -->

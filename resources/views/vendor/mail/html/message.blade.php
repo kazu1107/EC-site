@@ -21,7 +21,7 @@
 {{-- Footer --}}
 @slot('footer')
 @component('mail::footer')
-© {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
+Copyright © 2022 - <?php echo date('Y'); ?> ONZE. All Rights Reserved.
 @endcomponent
 @endslot
 @endcomponent
