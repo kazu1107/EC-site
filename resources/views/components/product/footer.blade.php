@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-Neutral-100 flex w-full px-3">
+    <div class="bg-stone-100 flex w-full px-3">
         <div class="w-3/12 flex flex-col my-0 pt-4 pb-4 px-3">
             <div class="">
                 <div class="no-underline text-black text-lg font-bold">外部リンク</div>
@@ -30,12 +30,12 @@
                 hover:duration-500 hover:underline-offset-4">お問い合わせ</a>
             </div>
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
-                hover:duration-500 hover:underline-offset-4">個人情報保護方針</a>
+                <a href="/protect" class="underline text-black hover:text-red-600
+                hover:duration-500 hover:underline-offset-4">利用規約</a>
         </div>
     </div>
 </div>
-<div class="bg-Neutral-100 flex h-20 w-full border-t">
+<div class="bg-stone-100 flex h-20 w-full border-t">
     <a href="https://github.com/kazu1107" class="h-8 my-auto pl-3 w-full">
         <img class="h-8 pl-3" src="/images/github.png">
     </a>

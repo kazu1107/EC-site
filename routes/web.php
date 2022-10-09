@@ -33,6 +33,10 @@ Route::get('/contact', function () {
     return view('product.contact');
 })->name('product.contact');
 
+Route::get('/protect', function () {
+    return view('product.protect');
+})->name('product.protect');
+
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function () {
