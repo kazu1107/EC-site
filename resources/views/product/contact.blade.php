@@ -23,6 +23,11 @@
                         </ul>
                     </div>
                 @endif
+                @if(session('message'))
+                    <div class="bg-blue-300 w-1/2 mx-auto p-2 mb-4 text-white">
+                        {{ session('message' )}}
+                    </div>
+                @endif
                 <form method="POST" action="{{ route('contact.store') }}">
                     @csrf
                         <div class="flex flex-wrap -m-2">
@@ -45,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="p-2 w-full">
-                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">送信</button>
                             </div>
                             {{-- <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                                 <a class="text-indigo-500">example@email.com</a>
@@ -83,3 +88,4 @@
     </section>
     <x-product.footer></x-product.footer>
 </x-guest-layout>
+

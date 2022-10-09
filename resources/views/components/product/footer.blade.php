@@ -26,7 +26,7 @@
                 hover:duration-500 hover:underline-offset-4">出品</a>
             </div>
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
+                <a href="/contact" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">お問い合わせ</a>
             </div>
             <div class="">

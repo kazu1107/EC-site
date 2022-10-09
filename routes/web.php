@@ -31,7 +31,7 @@ Route::get('/search', \App\Http\Controllers\Product\UsersController::class)
 
 Route::get('/contact', function () {
     return view('product.contact');
-})->name('contact');
+})->name('product.contact');
 
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 

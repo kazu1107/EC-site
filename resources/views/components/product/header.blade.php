@@ -74,7 +74,7 @@
         </div>
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/tell.png">
-            <a href="" class="no-underline text-center
+            <a href="contact" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">お問い合わせ</a>
         </div>
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
