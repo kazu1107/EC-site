@@ -62,9 +62,10 @@
             <a href="/product" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">ホーム</a>
         </div>
+        @auth
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/login.png">
-            <a href="" class="no-underline text-center
+            <a href="/user" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">マイページ</a>
         </div>
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
@@ -72,6 +73,19 @@
             <a href="" class="no-underline text-center
             text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">出品</a>
         </div>
+        @endauth
+        @guest
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
+            <img class="h-1/2 my-auto px-1" src="/images/login.png">
+            <a href="login" class="no-underline text-center
+            text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">マイページ</a>
+        </div>
+        <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
+            <img class="h-1/2 my-auto px-1" src="/images/camera.png">
+            <a href="login" class="no-underline text-center
+            text-black px-0 pt-12px pb-10px block hover:text-red-500 hover:duration-200">出品</a>
+        </div>
+        @endguest
         <div class="border-t md:border-t-0 border-solid md:w-1/5 mx-auto flex justify-center">
             <img class="h-1/2 my-auto px-1" src="/images/tell.png">
             <a href="/contact" class="no-underline text-center

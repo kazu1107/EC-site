@@ -17,14 +17,26 @@
                 <a href="/product" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">ホーム</a>
             </div>
+            @auth
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
+                <a href="/user" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">マイページ</a>
             </div>
             <div class="">
                 <a href="" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">出品</a>
             </div>
+            @endauth
+            @guest
+            <div class="">
+                <a href="login" class="underline text-black hover:text-red-600
+                hover:duration-500 hover:underline-offset-4">マイページ</a>
+            </div>
+            <div class="">
+                <a href="login" class="underline text-black hover:text-red-600
+                hover:duration-500 hover:underline-offset-4">出品</a>
+            </div>
+            @endguest
             <div class="">
                 <a href="/contact" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">お問い合わせ</a>

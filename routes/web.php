@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Product\UsersController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,8 @@ Route::get('/contact', function () {
 Route::get('/protect', function () {
     return view('product.protect');
 })->name('product.protect');
+
+Route::get('/user', [UserController::class, 'index'])->name('product.user');
 
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
