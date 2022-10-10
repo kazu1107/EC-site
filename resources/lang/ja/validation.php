@@ -138,7 +138,10 @@ return [
         'email' => 'メール',
         'message' => '内容',
         'product_name' => '商品名',
-        'product_description' => '商品説明'
+        'product_description' => '商品説明',
+        'post_code' => '郵便番号',
+        'adress' => '住所',
+        'tell' => '電話番号'
     ],
 
 ];

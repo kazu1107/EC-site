@@ -27,6 +27,26 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <!-- Post Code -->
+            <div class="mt-4">
+                <x-label for="post_code" :value="__('郵便番号')" />
+
+                <x-input id="post_code" class="block mt-1 w-full" type="number" name="post_code" :value="old('post_code')" required />
+
+            <!-- Address -->
+            <div class="mt-4">
+                <x-label for="adress" :value="__('住所')" />
+
+                <x-input id="adress" class="block mt-1 w-full" type="text" name="adress" :value="old('adress')" required />
+            </div>
+
+            <!-- Tell -->
+            <div class="mt-4">
+                <x-label for="tell" :value="__('電話番号')" />
+
+                <x-input id="tell" class="block mt-1 w-full" type="number" name="tell" :value="old('tell')" required />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('パスワード')" />

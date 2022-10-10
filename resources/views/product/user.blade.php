@@ -14,9 +14,9 @@
         <th>ID</th>
         <th>名前</th>
         <th>アドレス</th>
-        {{-- <th>郵便番号</th>
+        <th>郵便番号</th>
         <th>住所</th>
-        <th>電話番号</th> --}}
+        <th>電話番号</th>
     </tr>
     </thead>
     <tbody>
@@ -25,9 +25,9 @@
         <td>{{ $user->id }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->email }}</td>
-        {{-- <td>{{ $user->post_code }}</td>
+        <td>{{ $user->post_code }}</td>
         <td>{{ $user->adress }}</td>
-        <td>{{ $user->tell }}</td> --}}
+        <td>{{ $user->tell }}</td>
         </tr>
     </tbody>
     </table>

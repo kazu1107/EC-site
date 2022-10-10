@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use App\Mail\NewUserIntroduction;
 use Illuminate\Contracts\Mail\Mailer;
+use App\Rules\Post_CodeRule;
 
 class RegisteredUserController extends Controller
 {
@@ -39,12 +40,18 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'post_code' => ['required', 'digits:7' /* new Post_CodeRule() */],
+            'adress' => ['required', 'string', 'max:200'],
+            'tell' => ['required', 'string', 'max:11'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'adress' => $request->adress,
+            'tell' => $request->tell,
+            'post_code' => $request->post_code,
         ]);
 
         event(new Registered($user));
