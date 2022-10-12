@@ -40,6 +40,12 @@ Route::get('/protect', function () {
 
 Route::get('/user', [UserController::class, 'index'])->name('product.user');
 
+/* Route::group(['prefix' => 'useredit'], function() {
+    Route::get('{id}', [UsersController::class, 'getEdit'])->name('product.edituser');
+    Route::post('{id}', [UsersController::class, 'postEdit'])->name('product.postedituser');
+}); */
+Route::get('/useredit/{id}', [\App\Http\Controllers\UsersController::class, 'getEdit'])->name('product.useredit');
+
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function () {

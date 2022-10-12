@@ -6,8 +6,8 @@
 @section('content') --}}
 {{-- <section> --}}
 <x-layout.single>
-<div class="flex justify-center font-bold text-2xl pb-4">マイページ</div>
-<div class="container flex justify-center mt-3 mb-24">
+<div class="flex justify-center font-bold text-2xl pb-4 mt-3">マイページ</div>
+<div class="container flex justify-center mt-3">
     @if($authUser)
     @if(!empty($user))
     <table class="border-collapse rounded border-2 border-stone-200 table table-striped table-hover">
@@ -60,6 +60,10 @@
     </table>
     @endif
     @endif
+</div>
+<div class="p-2 w-3/12 mx-auto">
+<a href="/useredit/{{ $user->id }}" class="mb-24 mt-4 flex justify-center mx-auto text-white bg-indigo-500 border-0 py-2 px-8
+focus:outline-none hover:bg-indigo-600 rounded text-lg">変更</a>
 </div>
 </x-layout.single>
 {{-- </section> --}}
