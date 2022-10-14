@@ -44,7 +44,7 @@ Route::get('/user', [UserController::class, 'index'])->name('product.user');
     Route::get('{id}', [UsersController::class, 'getEdit'])->name('product.edituser');
     Route::post('{id}', [UsersController::class, 'postEdit'])->name('product.postedituser');
 }); */
-Route::get('/useredit/{id}', [\App\Http\Controllers\UsersController::class, 'getEdit'])->name('product.useredit');
+
 
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
@@ -53,6 +53,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/product/update/{productId}', \App\Http\Controllers\Product\Update\IndexController::class)->name('product.update.index');
     Route::put('/product/update/{productId}', \App\Http\Controllers\Product\Update\PutController::class)->name('product.update.put');
     Route::delete('/product/delete/{productId}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
+    Route::get('/useredit/{id}', [\App\Http\Controllers\UsersController::class, 'getEdit'])
+    ->name('product.useredit');
+    Route::post('/useredit/{id}', [\App\Http\Controllers\UsersController::class, 'postEdit'])
+    ->name('product.postuseredit');
 });
 
 Route::get('/dashboard', function () {

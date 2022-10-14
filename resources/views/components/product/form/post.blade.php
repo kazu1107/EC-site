@@ -1,4 +1,3 @@
-@auth
 <div class="p-4">
     <form action="{{ route('product.create') }}" method="post" enctype="multipart/form-data">
         @csrf
@@ -51,4 +50,3 @@
         </div>
     </form>
 </div>
-@endauth
