@@ -1,11 +1,11 @@
 <x-layout title="TOP | EC2">
     <x-product.header></x-product.header>
     <div class="bg-white">
-    <x-layout.single>
+    {{-- <x-layout.single>
         <div class="bg-white my-3">
             <x-product.form.post></x-product.form.post>
         </div>
-    </x-layout.single>
+    </x-layout.single> --}}
     <x-product.list :products="$products"></x-product.list>
     </div>
     <x-product.footer></x-product.footer>

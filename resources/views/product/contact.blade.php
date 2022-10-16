@@ -6,7 +6,7 @@
         </h2>
     </x-slot>
     <section class="text-gray-600 body-font relative">
-        <div class="container px-5 pt-0 pb-24 mx-auto">
+        <div class="container px-5 pt-3 pb-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-2">
                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">お問い合わせ</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">下記のフォームよりお問い合わせ下さい。</p>

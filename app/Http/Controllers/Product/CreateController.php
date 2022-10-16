@@ -22,6 +22,7 @@ class CreateController extends Controller
             $request->name(),
             $request->product(),
             $request->price(),
+            $request->postage(),
             $request->images() //ここたぶんミスしている
         );
         return redirect()->route('product.index');

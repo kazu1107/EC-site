@@ -45,6 +45,9 @@ Route::get('/user', [UserController::class, 'index'])->name('product.user');
     Route::post('{id}', [UsersController::class, 'postEdit'])->name('product.postedituser');
 }); */
 
+Route::get('/postform', function () {
+    return view('product.post_form');
+})->name('product.post_form');
 
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 

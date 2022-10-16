@@ -23,7 +23,7 @@
                 hover:duration-500 hover:underline-offset-4">マイページ</a>
             </div>
             <div class="">
-                <a href="" class="underline text-black hover:text-red-600
+                <a href="/postform" class="underline text-black hover:text-red-600
                 hover:duration-500 hover:underline-offset-4">出品</a>
             </div>
             @endauth

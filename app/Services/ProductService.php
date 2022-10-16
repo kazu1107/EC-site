@@ -25,14 +25,15 @@ class ProductService
         return $product->user_id === $userId;
     }
 
-    public function saveProduct(int $userId, string $product_name, string $description, int $price, array $images)
+    public function saveProduct(int $userId, string $product_name, string $description, int $price, string $postage, array $images)
     {
-        DB::transaction(function () use ($userId, $product_name, $description, $price, $images) {
+        DB::transaction(function () use ($userId, $product_name, $description, $price, $postage, $images) {
             $product = new Product;
             $product->user_id = $userId;
             $product->product_name = $product_name;
             $product->description = $description;
             $product->price = $price;
+            $product->postage = $postage;
             $product->save();
             foreach ($images as $image) {
                 Storage::putFile('public/images', $image);
