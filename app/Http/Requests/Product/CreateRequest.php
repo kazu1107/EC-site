@@ -38,7 +38,7 @@ class CreateRequest extends FormRequest
         return $this->user()->id;
     }
 
-    public function product(): string
+    public function product_description(): string //_description追記
     {
         return $this->input('product_description'); //productではないかもしれない
     }

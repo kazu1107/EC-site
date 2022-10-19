@@ -1,6 +1,6 @@
 <div class="p-4">
     <div class="text-center font-bold text-4xl mb-4">出品フォーム</div>
-    <form action="{{ route('product.create') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('product.confirm') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mt-1">商品名</div>
         <div class="mt-1">
@@ -56,6 +56,9 @@
         <x-alert.error>{{ $message }}</x-alert.error>
         @enderror
         @error('price')
+        <x-alert.error>{{ $message }}</x-alert.error>
+        @enderror
+        @error('postage')
         <x-alert.error>{{ $message }}</x-alert.error>
         @enderror
 

@@ -20,7 +20,7 @@ class CreateController extends Controller
         $productService->saveProduct(
             $request->userId(),
             $request->name(),
-            $request->product(),
+            $request->product_description(), //_descriptionを追記
             $request->price(),
             $request->postage(),
             $request->images() //ここたぶんミスしている

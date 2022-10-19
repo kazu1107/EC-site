@@ -1,4 +1,4 @@
-<x-layout title="TOP | EC2">
+<x-layout title="POST | EC2">
     <x-product.header></x-product.header>
     <div class="bg-white">
     <x-layout.single>
