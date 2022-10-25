@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Product\CreateRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ConfirmController extends Controller
 {
@@ -26,10 +28,20 @@ class ConfirmController extends Controller
             'product_name' => $request->product_name,
             'price' => $request->price,
             'postage' => $request->postage,
-            'images.*' => $request->images
+            /* 'images' => $request->images */ // .*をimagesの後ろから削除
     ];
+    $images = $request->images;
+    foreach ($images as $image) {
+        Storage::putFile('public/images', $image);
+        $imageModel = new Image();
+        $imageModel->name = $image->hashName();
+        /* $imageModel->save(); */
+    }
     /* dd($data); */
+    /* dd($imageModel); */
+    dd($images);
 
-    return view('product.confirm', $data);
+
+    return view('product.confirm', $data, compact('imageModel', 'images'));
     }
 }

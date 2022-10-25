@@ -3,33 +3,6 @@
     <div class="bg-white">
     <x-layout.single>
         {{-- <div class="bg-white mt-3 mb-24">
-            <div class="p-4">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">出品内容</div>:
-                            <div class="panel-body">
-                                <p>誤りがないことを確認のうえ送信ボタンをクリックしてください。</p>
-
-                                <table class="table">
-                                    <tr>
-                                        <th>商品名</th>
-                                        <td>{{ $product_name }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>商品説明</th>
-                                        <td>{{ $product_description }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>価格</th>
-                                        <td>{{ $price }}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>送料</th>
-                                        <td>{{ $postage }}</td>
-                                    </tr>
-                                </table>
-
                                 {!! Form::open(['url' => '/product/create',
                                                 'class' => 'form-horizontal',
                                                 'id' => 'post-input']) !!}
@@ -50,11 +23,6 @@
                                 {!! Form::submit('戻る', ['name' => 'action', 'class' => 'btn']) !!}
                                 {!! Form::submit('送信', ['name' => 'action', 'class' => 'btn btn-primary']) !!}
                                 {!! Form::close() !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div> --}}
         <form method="POST" action="{{ route('product.create') }}">
             @csrf
@@ -88,17 +56,37 @@
                 value="{{ $postage }}"
                 type="hidden">
 
-            {{-- <label>画像</label>
-            {{ $images }}
+                @if(count($images) > 0)
+                <div x-data="{}" class="rounded flex justify-center">
+                    {{-- <div class="flex justify-center -mx-2"> --}}
+                        @foreach($images as $image)
+                        <div class="rounded w-full bg-neutral-100">
+                            {{-- <div class="bg-gray-400"> --}}
+                                {{-- <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ asset('storage/images/' . $image->name)  }}' })" class="cursor-pointer"> --}}
+                                    {{-- <img src="{{ $image }}"> --}}
+                                    <img alt="{{ $imageModel->name }}" class="rounded bg-neutral-100 h-48 w-48
+                                    object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $imageModel->name) }}">
+                                    <input
+                                        name="images"
+                                        value="{{ $image }}"
+                                        type="hidden">
+                                {{-- </a> --}}
+                            {{-- </div> --}}
+                        </div>
+                        @endforeach
+                    {{-- </div> --}}
+                </div>
+                @endif
+            {{-- {{ $images }}
             <input
                 name="images"
                 value="{{ $images }}"
                 type="hidden"> --}}
+            {{-- @foreach($images as $image)
+            <p class="mb-0 truncate">{!! nl2br(e($image)) !!}</p>
+            @endforeach --}}
 
 
-            <button type="submit" name="action" value="back">
-                入力内容修正
-            </button>
             <button type="submit" name="action" value="submit">
                 送信する
             </button>
