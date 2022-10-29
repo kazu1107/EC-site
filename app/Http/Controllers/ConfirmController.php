@@ -35,11 +35,13 @@ class ConfirmController extends Controller
         Storage::putFile('public/images', $image);
         $imageModel = new Image();
         $imageModel->name = $image->hashName();
+        $image->name = $imageModel->name;
         /* $imageModel->save(); */
     }
     /* dd($data); */
     /* dd($imageModel); */
-    dd($images);
+    /* dd($images); */
+    /* dd($request); */
 
 
     return view('product.confirm', $data, compact('imageModel', 'images'));

@@ -24,7 +24,7 @@
                                 {!! Form::submit('送信', ['name' => 'action', 'class' => 'btn btn-primary']) !!}
                                 {!! Form::close() !!}
         </div> --}}
-        <form method="POST" action="{{ route('product.create') }}">
+        <form method="post" action="{{ route('product.create') }}" enctype="multipart/form-data">
             @csrf
 
             <label>商品名</label>
@@ -57,6 +57,7 @@
                 type="hidden">
 
                 @if(count($images) > 0)
+                <label>画像</label>
                 <div x-data="{}" class="rounded flex justify-center">
                     {{-- <div class="flex justify-center -mx-2"> --}}
                         @foreach($images as $image)
@@ -64,16 +65,23 @@
                             {{-- <div class="bg-gray-400"> --}}
                                 {{-- <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ asset('storage/images/' . $image->name)  }}' })" class="cursor-pointer"> --}}
                                     {{-- <img src="{{ $image }}"> --}}
-                                    <img alt="{{ $imageModel->name }}" class="rounded bg-neutral-100 h-48 w-48
-                                    object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $imageModel->name) }}">
+                                    <img alt="" class="rounded bg-neutral-100 h-48 w-48
+                                    object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $image->name) }}">
+                                    {{-- <div class="hidden"> --}}
                                     <input
-                                        name="images"
-                                        value="{{ $image }}"
-                                        type="hidden">
+                                        name="images[]"
+                                        value="{{ $image->name }}"
+                                        type="hidden"> {{-- fileにするとupした画像の登録はできる --}}
+                                    {{-- </div> --}}
                                 {{-- </a> --}}
                             {{-- </div> --}}
                         </div>
                         @endforeach
+                        {{-- <input
+                                        name="images[]"
+                                        value="{{ $image->name }}"
+                                        type="file"
+                                        multiple> --}}
                     {{-- </div> --}}
                 </div>
                 @endif
@@ -86,10 +94,12 @@
             <p class="mb-0 truncate">{!! nl2br(e($image)) !!}</p>
             @endforeach --}}
 
-
-            <button type="submit" name="action" value="submit">
+            {{-- <button type="submit" name="action" value="submit">
                 送信する
-            </button>
+            </button> --}}
+            <div class="p-2 w-full">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">送信</button>
+            </div>
         </form>
     </x-layout.single>
     </div>

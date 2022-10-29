@@ -29,7 +29,7 @@ class CreateRequest extends FormRequest
             'price' => 'required|max:100000',
             'images' => 'array|max:4',
             'postage' => 'required',
-            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            /* 'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' */ // 10/26ここ消して処理できた
         ];
     }
 

@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class ProductService
 {
@@ -34,11 +35,14 @@ class ProductService
             $product->description = $description;
             $product->price = $price;
             $product->postage = $postage;
+            /* dd($images); */
             $product->save();
             foreach ($images as $image) {
-                Storage::putFile('public/images', $image);
+                /* Storage::putFile('public/images', $image); */
+                $imageModel = File::get('storage/images/' .$image);
                 $imageModel = new Image();
-                $imageModel->name = $image->hashName();
+                $imageModel->name = $image; //->hashName()を末尾から消した
+                /* dd($imageModel); */
                 $imageModel->save();
                 $product->images()->attach($imageModel->id);
             }

@@ -23,8 +23,29 @@ class CreateController extends Controller
             $request->product_description(), //_descriptionを追記
             $request->price(),
             $request->postage(),
-            $request->images() //ここたぶんミスしている
+            /* $request->images(), */ //ここたぶんミスしている
+            $request->input('images'),
+            $request->file('images'),
         );
+        /* $images = $request->images;
+        foreach ($images as $image) {
+        $image = $request->file('image');
+
+        // 画像情報がセットされていれば、保存処理を実行
+        if (isset($image)) {
+            // storage > public > img配下に画像が保存される
+            $path = $image->store('images','public');
+            // store処理が実行できたらDBに保存処理を実行
+            if ($path) {
+                // DBに登録する処理
+                Product::create([
+                    'images' => $path,
+                ]);
+                dd($request);
+            }
+        }
+    }
+        dd($images); */
         return redirect()->route('product.index');
     }
 }

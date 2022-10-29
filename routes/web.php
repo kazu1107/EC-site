@@ -17,14 +17,14 @@ use App\Http\Controllers\ConfirmController;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
 });
-
+ */
 // Sample
-Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class, 'show']);
+/* Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class, 'show']);
 Route::get('/sample/{id}', [\App\Http\Controllers\Sample\IndexController::class, 'showId']);
-
+ */
 Route::get('/product', \App\Http\Controllers\Product\IndexController::class)
 ->name('product.index');
 
