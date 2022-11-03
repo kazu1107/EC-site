@@ -46,6 +46,9 @@ Route::get('/user', [UserController::class, 'index'])->name('product.user');
     Route::post('{id}', [UsersController::class, 'postEdit'])->name('product.postedituser');
 }); */
 
+Route::get('/product/product_page/{productId}', \App\Http\Controllers\ProductController::class)
+->name('product_page.index');
+
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
 Route::middleware('auth')->group(function () {

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Product\CreateRequest;
+use App\Http\Requests\Product\ConfirmRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Image;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ConfirmController extends Controller
 {
-    public function confirm(CreateRequest $request)
+    public function confirm(ConfirmRequest $request)
     {
         /* $request->validate([
             'product_description' => 'required|max:255',

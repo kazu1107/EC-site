@@ -19,6 +19,7 @@ class IndexController extends Controller
     {
         $products = $productService->getProducts();
         $products = Product::orderBy('created_at', 'DESC')->paginate(25);
+        /* dd($products); */
         return view('product.index')
             ->with('products', $products);
     }

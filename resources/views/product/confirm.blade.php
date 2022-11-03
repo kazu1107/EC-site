@@ -2,79 +2,63 @@
     <x-product.header></x-product.header>
     <div class="bg-white">
     <x-layout.single>
-        {{-- <div class="bg-white mt-3 mb-24">
-                                {!! Form::open(['url' => '/product/create',
-                                                'class' => 'form-horizontal',
-                                                'id' => 'post-input']) !!}
-
-                                @foreach($product->getAttributes() as $key => $value)
-                                    @if(isset($value))
-                                        @if(is_array($value))
-                                            @foreach($value as $subValue)
-                                                <input name="{{ $key }}[]" type="hidden" value="{{ $subValue }}">
-                                            @endforeach
-                                        @else
-                                            {!! Form::hidden($key, $value) !!}
-                                        @endif
-
-                                    @endif
-                                @endforeach
-
-                                {!! Form::submit('戻る', ['name' => 'action', 'class' => 'btn']) !!}
-                                {!! Form::submit('送信', ['name' => 'action', 'class' => 'btn btn-primary']) !!}
-                                {!! Form::close() !!}
-        </div> --}}
         <form method="post" action="{{ route('product.create') }}" enctype="multipart/form-data">
             @csrf
+            <table class="mt-3 mb-4 w-full border-collapse rounded border-2 border-stone-200 table table-striped table-hover">
 
-            <label>商品名</label>
-            {{ $product_name }}
+            <tr>
+            <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>商品名</label></th>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $product_name }}</td>
+            </tr>
             <input
                 name="product_name"
                 value="{{ $product_name }}"
                 type="hidden">
 
-            <label>商品説明</label>
-            {{ $product_description }}
+            <tr>
+            <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>商品説明</label></th>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $product_description }}</td>
+            </tr>
             <input
                 name="product_description"
                 value="{{ $product_description }}"
                 type="hidden">
 
 
-            <label>価格</label>
-            {{ $price }}
+            <tr>
+            <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>価格</label></th>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $price }}</td>
+            </tr>
             <input
                 name="price"
                 value="{{ $price }}"
                 type="hidden">
 
-            <label>発送方法</label>
-            {{ $postage }}
+            <tr>
+            <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>発送方法</label></th>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $postage }}</td>
+            </tr>
             <input
                 name="postage"
                 value="{{ $postage }}"
                 type="hidden">
 
                 @if(count($images) > 0)
-                <label>画像</label>
+                {{-- <label>画像</label> --}}
                 <div x-data="{}" class="rounded flex justify-center">
-                    {{-- <div class="flex justify-center -mx-2"> --}}
                         @foreach($images as $image)
+                        <tr>
+                        <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>画像</label></th>
+                        <td class="px-3 py-2 border-2 border-stone-200"><img alt="" class="rounded bg-neutral-100 h-48 w-48
+                            object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $image->name) }}"></td>
+                        </tr>
                         <div class="rounded w-full bg-neutral-100">
-                            {{-- <div class="bg-gray-400"> --}}
-                                {{-- <a @click="$dispatch('img-modal', {  imgModalSrc: '{{ asset('storage/images/' . $image->name)  }}' })" class="cursor-pointer"> --}}
-                                    {{-- <img src="{{ $image }}"> --}}
-                                    <img alt="" class="rounded bg-neutral-100 h-48 w-48
-                                    object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $image->name) }}">
-                                    {{-- <div class="hidden"> --}}
+                                    {{-- <img alt="" class="rounded bg-neutral-100 h-48 w-48
+                                    object-contain mx-auto my-auto" src="{{ asset('storage/images/' . $image->name) }}"> --}}
                                     <input
                                         name="images[]"
                                         value="{{ $image->name }}"
                                         type="hidden"> {{-- fileにするとupした画像の登録はできる --}}
-                                    {{-- </div> --}}
-                                {{-- </a> --}}
-                            {{-- </div> --}}
                         </div>
                         @endforeach
                         {{-- <input
@@ -85,20 +69,10 @@
                     {{-- </div> --}}
                 </div>
                 @endif
-            {{-- {{ $images }}
-            <input
-                name="images"
-                value="{{ $images }}"
-                type="hidden"> --}}
-            {{-- @foreach($images as $image)
-            <p class="mb-0 truncate">{!! nl2br(e($image)) !!}</p>
-            @endforeach --}}
+            </table>
 
-            {{-- <button type="submit" name="action" value="submit">
-                送信する
-            </button> --}}
             <div class="p-2 w-full">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">送信</button>
+                <button class="mt-4 mb-24 flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">送信</button>
             </div>
         </form>
     </x-layout.single>
