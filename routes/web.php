@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConfirmController;
 use App\Http\Controllers\BuyController;
+use App\Http\Controllers\ChargeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,7 @@ Route::middleware('auth')->group(function () {
         return view('product.post_form');
     })->name('product.post_form');
     Route::post('/buy', [BuyController::class,'buy'])->name('product.buy');
+    Route::post('/charge', [ChargeController::class,'charge'])->name('product.charge');
     Route::post('/confirm', [ConfirmController::class,'confirm'])->name('product.confirm');
     Route::post('/product/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');
     Route::get('/product/update/{productId}', \App\Http\Controllers\Product\Update\IndexController::class)->name('product.update.index');
