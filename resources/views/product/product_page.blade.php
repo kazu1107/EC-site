@@ -54,6 +54,11 @@
         value="{{ $product->postage }}"
         type="hidden">
 
+        <input
+        name="productId"
+        value="{{ $productId }}"
+        type="hidden">
+
         @error('product_name')
         <x-alert.error>{{ $message }}</x-alert.error>
         @enderror

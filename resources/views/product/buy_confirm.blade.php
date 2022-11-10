@@ -61,12 +61,22 @@
                 type="hidden">
 
             <tr>
+            <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>お届け先</label></th>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $adress }}</td>
+            </tr>
+
+            <tr>
             <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>発送方法</label></th>
             <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $postage }}</td>
             </tr>
             <input
                 name="postage"
                 value="{{ $postage }}"
+                type="hidden">
+
+            <input
+                name="productId"
+                value="{{ $productId }}"
                 type="hidden">
 
 

@@ -41,6 +41,14 @@ Route::get('/protect', function () {
     return view('product.protect');
 })->name('product.protect');
 
+/* Route::get('/complete', function () {
+    return view('product.complete');
+})->name('product.complete'); */
+
+/* Route::get('/error', function () {
+    return view('product.error');
+})->name('product.error'); */
+
 Route::get('/user', [UserController::class, 'index'])->name('product.user');
 
 /* Route::group(['prefix' => 'useredit'], function() {

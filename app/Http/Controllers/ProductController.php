@@ -32,6 +32,7 @@ class ProductController extends Controller
         return view('product.product_page')->with([
             'product' => $product,
             'images' => $images,
+            'productId' => $productId,
         ]);
     }
 }

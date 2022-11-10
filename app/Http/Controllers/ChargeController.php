@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-use App\Models\Image;
+use App\Models\Buying;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class ChargeController extends Controller
 {
@@ -36,6 +37,12 @@ try {
     // :
     // :
     // :
+    $id = $request->productId;
+    $post = Product::where('id',$id)->first();
+    $authUser = Auth::id();
+    $post->buying_id = $authUser;
+    /* dd($post); */
+    $post->save();
 
     // (3) 売上の確定
     $charge->capture();
