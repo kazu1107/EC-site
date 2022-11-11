@@ -12,7 +12,12 @@
                 <a href="{{ route('product_page.index', ['productId' => $product->id]) }}" class="relative">
                 <x-product.images :images="$product->images"/>
                     <div class="absolute bottom-0">
+                        @if($product->buying_id == 0)
                         <p class="text-white mb-0 font-bold bg-price_color opacity-90 rounded-r-full">￥{!! nl2br(e($product->price)) !!}&nbsp;&nbsp;</p>
+                        @endif
+                        @if($product->buying_id != 0)
+                        <p class="text-red-600 mb-0 font-bold bg-price_color opacity-90 rounded-r-full">&nbsp;sold out&nbsp;&nbsp;</p>
+                        @endif
                     </div>
                 </a>
                 <p class="mb-0 truncate">{!! nl2br(e($product->product_name)) !!}</p>

@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Buying;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\BuyingMail;
 
 class ChargeController extends Controller
 {
@@ -43,6 +46,20 @@ try {
     $post->buying_id = $authUser;
     /* dd($post); */
     $post->save();
+
+    $user = User::where('id',$authUser)->first();
+    $mail = $user->email;
+
+    /* $data = [
+        'product_name' => $request->product_name,
+        'price' => $request->price,
+        'postage' => $request->postage,
+    ]; */
+        $product_name = $request->product_name;
+        $price = $request->price;
+        $postage = $request->postage;
+
+    Mail::send(new BuyingMail($product_name,$price,$postage,$mail));
 
     // (3) 売上の確定
     $charge->capture();

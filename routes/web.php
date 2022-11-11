@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConfirmController;
 use App\Http\Controllers\BuyController;
 use App\Http\Controllers\ChargeController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,7 @@ Route::middleware('auth')->group(function () {
         return view('product.post_form');
     })->name('product.post_form');
     Route::post('/buy', [BuyController::class,'buy'])->name('product.buy');
+    Route::get('/history', [HistoryController::class,'history'])->name('product.history');
     Route::post('/charge', [ChargeController::class,'charge'])->name('product.charge');
     Route::post('/confirm', [ConfirmController::class,'confirm'])->name('product.confirm');
     Route::post('/product/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');

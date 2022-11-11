@@ -13,7 +13,7 @@
     <div class="font-bold text-center py-2 bg-menu_logo_color">メニュー</div>
     <a href="/user" class="text-blue-500 text-left no-underline hover:text-red-600
                 hover:duration-500 py-2 px-3">ユーザー情報</a>
-    <a href="" class="text-blue-500 text-left no-underline hover:text-red-600
+    <a href="/history" class="text-blue-500 text-left no-underline hover:text-red-600
                 hover:duration-500 py-2 px-3">注文履歴</a>
 </div>
 <div class="w-2/3 ml-4">

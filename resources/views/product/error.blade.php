@@ -1,4 +1,4 @@
-<x-layout title="COMPLETE | EC2">
+<x-layout title="ERROR | EC2">
     <x-product.header></x-product.header>
     <div class="bg-white">
     <x-layout.single>

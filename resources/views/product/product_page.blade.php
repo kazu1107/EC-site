@@ -38,9 +38,17 @@
         type="hidden">
         </div>
 
+        @if($product->buying_id  == 0)
         <div class="py-2 w-full">
             <button class="w-full my-4 flex justify-center mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">商品を購入する</button>
         </div>
+        @endif
+        @if($product->buying_id  != 0)
+        <div class="py-2 w-full">
+            <div class="w-full my-4 flex justify-center mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none rounded text-lg">売り切れ</div>
+        </div>
+        @endif
+
         <div class="py-2 text-stone-500 font-bold text-2xl">商品の説明</div>
         <div class="py-2">{!! nl2br(e($product->description)) !!}</div>
         <input

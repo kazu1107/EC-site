@@ -27,7 +27,7 @@ class ProductController extends Controller
         } ここのコメントアウト部分は自身が出品した商品のみにアクセスできるようにする*/
         $product = Product::with('images')->where('id', $productId)->firstOrFail();
         $images = $product->images;
-        /* dd($products); */
+        /* dd($product); */
         /* dd($images); */
         return view('product.product_page')->with([
             'product' => $product,
