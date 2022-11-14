@@ -53,7 +53,7 @@
 
             <tr>
             <th class="bg-stone-100 text-left px-3 py-2 border-2 border-stone-200"><label>価格</label></th>
-            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $price }}</td>
+            <td class="text-center px-3 py-2 border-2 border-stone-200">{{ $price }}円</td>
             </tr>
             <input
                 name="price"

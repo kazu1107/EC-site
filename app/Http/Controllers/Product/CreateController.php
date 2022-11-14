@@ -23,6 +23,7 @@ class CreateController extends Controller
             $request->product_description(), //_descriptionを追記
             $request->price(),
             $request->postage(),
+            $request->buying_id(),
             /* $request->images(), */ //ここたぶんミスしている
             $request->input('images'),
             $request->file('images'),

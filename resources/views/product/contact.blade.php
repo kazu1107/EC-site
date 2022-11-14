@@ -1,4 +1,5 @@
-<x-guest-layout>
+{{-- <x-guest-layout> --}}
+<x-layout title="CONTACT | EC2">
     <x-product.header></x-product.header>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -87,5 +88,6 @@
         </div>
     </section>
     <x-product.footer></x-product.footer>
-</x-guest-layout>
+{{-- </x-guest-layout> --}}
+</x-layout>
 

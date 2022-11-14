@@ -43,6 +43,11 @@
                 value="{{ $postage }}"
                 type="hidden">
 
+            <input
+                name="buying_id"
+                value="0"
+                type="hidden">
+
                 @if(count($images) > 0)
                 {{-- <label>画像</label> --}}
                 <div x-data="{}" class="rounded flex justify-center">

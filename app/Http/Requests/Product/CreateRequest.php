@@ -29,6 +29,7 @@ class CreateRequest extends FormRequest
             'price' => 'required|max:100000',
             'images' => 'array|max:4',
             'postage' => 'required',
+            'buying_id' => 'required',
             /* 'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' */ // 10/26ここ消して処理できた
         ];
     }
@@ -61,5 +62,10 @@ class CreateRequest extends FormRequest
     public function images(): array
     {
         return $this->file('images', []);
+    }
+
+    public function buying_id(): int
+    {
+        return (int) $this->input('buying_id');
     }
 }

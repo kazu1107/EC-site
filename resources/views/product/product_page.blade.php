@@ -56,7 +56,7 @@
         value="{{ $product->description }}"
         type="hidden">
 
-        <div class="py-2">発送方法：{!! nl2br(e($product->postage)) !!}</div>
+        <div class="py-2">発送方法：{!! nl2br(e($product->postage)) !!}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※送料は出品者負担になります</div>
         <input
         name="postage"
         value="{{ $product->postage }}"
